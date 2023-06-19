@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <title>Tokyo Ghoul</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        
+</head>
+<body>
+        <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <div class="imgBx">
+                          <img src="images/725883.png" alt="">
+                      </div>
+                      <div class="details">
+                          <h3>Ken Kaneki<br> <span>"I'm not the protagonist of a novel or anything. I'm just a college student who likes to read, like you could find anywhere. But... if, for argument's sake, you were to write a story with me in the lead role, it would certainly be... a tragedy."</span></h3>
+                      </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img src="images/649533.png" alt="">
+                        </div>
+                        <div class="details">
+                            <h3>Touka Kirishima<br> <span>"What the hell do you know?! It's all because I can't eat, because I could be a target at any time, all because I'm a ghoul! No matter how much I try, there's a wall I can never jump over, and there's happiness that I can never have. But I'm still hanging on to life. Despite it all."</span></h3>
+                        </div>
+                    </div>
+                   
+                    <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img src="images/1043091.jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Hideyoshi Nagachika<br> <span> Hideyoshi Nagachika (永近 英良, Nagachika Hideyoshi), also known as Hide (ヒデ), is a normal human and the best friend of Ken Kaneki.</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                                <div class="imgBx">
+                                    <img src="images/596712.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <h3>Uta <br> <span> Uta (ウタ, Uta) is a ghoul and an old friend of Renji Yomo and Itori. He owns the HySy ArtMask Studio, where he sells masks, whilst also being a member of the Clowns. He is known as No Face (ノーフェイス, Nō Feisu) to the CCG investigators.</span></h3>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                    <div class="imgBx">
+                                        <img src="images/815642.png" alt="">
+                                    </div>
+                                    <div class="details">
+                                        <h3>Juuzou Suzuya <br> <span> Juuzou Suzuya (鈴屋 什造, Suzuya Jūzō) is a Special Class Ghoul Investigator. In the past, he went by the name Rei Suzuya (鈴屋 玲, Suzuya Rei). He was first partnered with Yukinori Shinohara, and is now currently the leader of Suzuya Squad.</span></h3>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                        <div class="imgBx">
+                                            <img src="images/679363.jpg" alt="">
+                                        </div>
+                                        <div class="details">
+                                            <h3>Shuu Tsukiyama<br> <span>Shuu Tsukiyama (月山 習, Tsukiyama Shū) was the infamous Gourmet (美食家, Bishokuka) ghoul of the 20th ward.He comes from the extremely wealthy and influential Tsukiyama family which his father, Mirumo Tsukiyama was the head of.</span></h3>
+                                        </div>
+                                    </div>
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+              </div>
+        <nav class="menu-activea">
+                <h1>menu</h1>
+                <ul>
+                        <a href="main.html"><li>Home</li></a>
+                        <a href="characters.html"><li class="active">Characters</li></a>
+                        <a href="watch.html"><li>Watch</li></a>
+                </ul>
+        </nav>
+
+      
+        <script type="text/javascript" src="swiper.min.js"></script>
+        <script>
+                var swiper = new Swiper('.swiper-container', {
+                  effect: 'coverflow',
+                  grabCursor: true,
+                  centeredSlides: true,
+                  slidesPerView: 'auto',
+                  coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows : true,
+                  },
+                  pagination: {
+                    el: '.swiper-pagination',
+                  },
+                });
+              </script>
+
+
+
+                <script>
+                        (function() {
+                    
+                      var nav = $('nav'),
+                        menu = $('nav h1'),
+                        main = $('main'),
+                          open = false,
+                          hover = false;
+                    
+                      menu.on('click', function() {
+                            open = !open ? true : false;
+                        nav.toggleClass('menu-active');
+                        main.toggleClass('menu-active');
+                        nav.removeClass('menu-hover');
+                        main.removeClass('menu-hover');
+                        console.log(open);
+                      });
+                      menu.hover( 
+                        function() {
+                          if (!open) {
+                              nav.addClass('menu-hover');
+                              main.addClass('menu-hover');
+                          }
+                        }, function() {
+                          nav.removeClass('menu-hover');
+                          main.removeClass('menu-hover');
+                        }
+                      );
+                        
+                    })();
+                        
+                    </script>
+   
+</body>
+</html>

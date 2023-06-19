@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: radial-gradient(#b30086,  #990073, #330026 );
+}
+.clock{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/clock.png);
+    background-size: cover ;
+    border-radius: 50%;
+    border: 11px solid #990073;
+    box-shadow: 0 -15px 15px #b30086, 
+                inset 0 -15px 15px #b30086,
+                0 15px 15px rgba(0, 0, 0, 0.5), inset 0 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+.clock:before{
+box-shadow: inset 0 8px 15px #4d0039, 0 3px 15px rgba(0, 0, 0, 0.5);    
+border: 1px solid #b30086;    
+content: ' ';
+position: absolute;
+width: 15px;
+height: 15px;
+background: white;
+border-radius: 50%;
+z-index: 10000;
+}
+
+.clock .hour,
+.clock .minutes,
+.clock .seconds{
+    position: absolute;
+}
+.clock .hour, .hr{
+    width: 120px;
+    height: 120px;
+}
+.clock .minutes, .min{
+    width: 190px;
+    height: 190px;
+}
+.clock .seconds, .sec{
+    width: 230px;
+    height: 230px;
+}
+
+.hr,.min, .sec{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+.hr:before{
+    box-shadow: inset 0 8px 15px #4d0039, 0 3px 15px rgba(0, 0, 0, 0.5);    
+    
+    content: ' ';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #4d0039;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.min:before{
+    box-shadow: inset 0 8px 15px #4d0039, 0 3px 15px rgba(0, 0, 0, 0.5);    
+    
+    content: ' ';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #4d0039;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+.sec:before{
+    box-shadow: inset 0 8px 15px #ff0066, 0 3px 15px rgba(0, 0, 0, 0.5);    
+    
+    content: ' ';
+    position: absolute;
+    width: 2px;
+    height: 160px;
+    background: #ff0066;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}

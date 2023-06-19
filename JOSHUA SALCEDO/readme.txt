@@ -1,0 +1,1 @@
+sir Froi, di ko na po nasama video. Ang laki po ng size eh. hihi

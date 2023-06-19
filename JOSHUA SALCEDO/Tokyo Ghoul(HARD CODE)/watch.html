@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <title>Tokyo Ghoul</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+        <nav class="menu-activea">
+                <h1>menu</h1>
+                <ul>
+                        <a href="main.html"><li>Home</li></a>
+                        <a href="characters.html"><li>Characters</li></a>
+                        <a href="watch.html"><li class="active">Watch</li></a>
+                </ul>
+        </nav>
+        
+                <div class="button">
+                        <select>
+                            <option value ="EP1"> Episode 1 </option>
+                            <option value ="EP2"> Episode 2 </option>
+                            <option value ="EP3"> Episode 3 </option>
+                            <option value ="EP4"> Episode 4 </option>
+                            <option value ="EP5"> Episode 5 </option>
+                            <option value ="EP6"> Episode 6 </option>
+                            <option value ="EP7"> Episode 7 </option>
+                            <option value ="EP8"> Episode 8 </option>
+                            <option value ="EP9"> Episode 9 </option>
+                            <option value ="EP10"> Episode 10 </option>
+                            <option value ="EP11"> Episode 11 </option>
+                            <option value ="EP12"> Episode 12 </option>
+                        </select>
+                    </div>
+                    <div class="vplayer">
+                        <video width="720" height="360"  autoplay controls="">
+                            <source src="videos/episode1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+
+
+
+
+
+                <script>
+                        (function() {
+                    
+                      var nav = $('nav'),
+                        menu = $('nav h1'),
+                        main = $('main'),
+                          open = false,
+                          hover = false;
+                    
+                      menu.on('click', function() {
+                            open = !open ? true : false;
+                        nav.toggleClass('menu-active');
+                        main.toggleClass('menu-active');
+                        nav.removeClass('menu-hover');
+                        main.removeClass('menu-hover');
+                        console.log(open);
+                      });
+                      menu.hover( 
+                        function() {
+                          if (!open) {
+                              nav.addClass('menu-hover');
+                              main.addClass('menu-hover');
+                          }
+                        }, function() {
+                          nav.removeClass('menu-hover');
+                          main.removeClass('menu-hover');
+                        }
+                      );
+                        
+                    })();
+                        
+                    </script>
+</body>
+</html>
